@@ -2,6 +2,7 @@ import { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Links from './Links';
+import Weather from './Weather';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,7 +15,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
         <p>
           <button type="button" onClick={() => setCount((count) => count + 1)}>
@@ -22,8 +22,9 @@ function App() {
           </button>
         </p>
         <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
+          Let's call the Weather ApiGateway (Lambda + DynamoDB) ...
         </p>
+        <Weather />
         <Links links={mylinks} />
       </header>
     </div>
